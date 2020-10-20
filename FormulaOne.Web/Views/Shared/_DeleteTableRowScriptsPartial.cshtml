@@ -1,0 +1,10 @@
+﻿<script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>
+
+<script>
+    success = function (form) {
+        $(form).parents('tr').remove();
+    };
+    failure = function () {
+        alert("Hiba történt!");
+    }
+</script>

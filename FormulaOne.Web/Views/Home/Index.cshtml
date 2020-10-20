@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "F1";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Forma 1 csapatok kezelése</h1>
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <p>Létrehozáshoz, szerkesztéshez és törléshez bejelentkezés szükséges!</p>
+    }
+</div>

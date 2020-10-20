@@ -1,0 +1,47 @@
+﻿@model FormulaOne.Web.ViewModels.FormulaOneTeam.FormulaOneTeamViewModel
+
+@{
+    ViewData["Title"] = "Létrehozás";
+}
+
+<h1>Létrehozás</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FoundationYear" class="control-label"></label>
+                <input asp-for="FoundationYear" class="form-control" />
+                <span asp-validation-for="FoundationYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfChampionshipWon" class="control-label"></label>
+                <input asp-for="NumberOfChampionshipWon" class="form-control" />
+                <span asp-validation-for="NumberOfChampionshipWon" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsEntryFeePaid" /> @Html.DisplayNameFor(model => model.IsEntryFeePaid)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Mentés" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Vissza a listához</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
